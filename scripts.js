@@ -26,13 +26,13 @@ function embaralharCartas(){
 }
 
 function montarTabuleiro(cartasEmbaralhadas){
-for (i = 0; i < cartasEmbaralhadas.length; i++){ 
-    document.querySelector(".tabuleiro").innerHTML+=`<div class='carta'><img class='traseira-papagaio' onclick='virarCarta()' src='arquivos/front.png'/></div>`
-    }
+    for (i = 0; i < cartasEmbaralhadas.length; i++){  
+        document.querySelector(".tabuleiro").innerHTML+=`<div class='carta'><img class='traseira-carta' onclick='virarCarta(this)' src='arquivos/front.png'/><img class='frente-carta escondido' src='arquivos/${cartasEmbaralhadas[i]}.gif' /></div>`        }
 }    
 
-function virarCarta(){
-    /* Próxima coisa à fazer */
+function virarCarta(cartaVirada){
+        cartaVirada.querySelector(".traseira-carta").add("escondido");
+        cartaVirada.querySelector(".frente-carta").remove("escondido");
 }
 
 configurarJogo();

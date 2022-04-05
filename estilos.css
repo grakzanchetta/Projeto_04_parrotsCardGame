@@ -40,7 +40,16 @@ h1 {
     margin: 0px 34px 34px 34px;
 }
 
-.traseira-papagaio {
+.traseira-carta {
     width: 100px;
     height: 100px;
+}
+
+.frente-carta {
+    width: 100px;
+    height: 100px;
+}
+
+.escondido {
+    display: none;
 }
